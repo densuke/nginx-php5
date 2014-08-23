@@ -10,7 +10,7 @@ RUN apt-get autoremove -y
 RUN apt-get clean
 RUN mkdir /var/www && chown -R www-data.www-data /var/www
 ADD supervisord/nginx.ini /etc/supervisord.d/
-ADD supervisord/ php5-fpm.ini /etc/supervisord.d/
+ADD supervisord/php5-fpm.ini /etc/supervisord.d/
 ADD php5-fpm/php.ini /etc/php5/fpm/
 ADD nginx/default /etc/nginx/sites-available/
 
